@@ -1,8 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import mic from "./../assets/mic.png";
 import record from "./../assets/record.png";
-import { useNavigate } from "react-router-dom";
-// import "./AudioRecorder.css";
 import play from "./../assets/play.png";
 import pause from "./../assets/pause.png";
 import download from "./../assets/download.png";
@@ -10,7 +8,6 @@ import headphone from "./../assets/headphone.png";
 import remove from "./../assets/remove.png";
 
 const AudioRecorder = () => {
-  const navigate = useNavigate();
   const [isRecording, setIsRecording] = useState(false);
   const [duration, setDuration] = useState(0);
   const [url, setUrl] = useState("");

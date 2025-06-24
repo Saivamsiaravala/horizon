@@ -96,7 +96,7 @@ const VideoRecorder = () => {
     setCurrentTime(e.target.value);
   };
 
-  const removeAudio = () => {
+  const removeVideo = () => {
     console.log("object");
     chunks.current = [];
     setDuration(0);
@@ -123,7 +123,6 @@ const VideoRecorder = () => {
 
   return (
     <div className="video">
-      {/* <div>{url ? <></> : <>{isRecording ? <>preview</> : <>image</>}</>} </div> */}
       <div className="multimedia">
         {url ? (
           <div className="operation">
@@ -178,7 +177,7 @@ const VideoRecorder = () => {
           </button>
           <a
             href={url}
-            download="recording.mp3"
+            download="recording.webm"
             target="_blank"
             className="btn"
           >
