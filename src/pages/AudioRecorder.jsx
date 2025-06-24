@@ -115,53 +115,35 @@ const AudioRecorder = () => {
 
   return (
     <div className="audio">
-      <div className="headphone">
-        <img src={headphone} alt="Audio" />
-      </div>
-      {url ? (
-        <div className="duration">
-          <span>{timeFormat(isRecording ? duration : currentTime)}</span>
-          <span>{timeFormat(duration)}</span>
+      <div className="content">
+        <div className="headphone">
+          <img src={headphone} alt="Audio" />
         </div>
-      ) : (
-        <div className="recording">
-          {/* <span>{timeFormat(isRecording ? duration : currentTime)}</span> */}
-          <span>{timeFormat(duration)}</span>
-        </div>
-      )}
-      {url && (
-        <div className="operation">
-          <input
-            type="range"
-            min={0}
-            max={duration}
-            value={currentTime}
-            onChange={handleSeek}
-            className="duration-bar"
-          />
-          <audio ref={audioRef} src={url} style={{ display: "none" }} />
-          <div className="btns">
-            <button className="btn" onClick={handlePlayPause}>
-              {isPlaying ? (
-                <img src={pause} alt="pause" />
-              ) : (
-                <img src={play} alt="play" />
-              )}
-            </button>
-            <button className="btn" onClick={removeAudio}>
-              <img src={remove} alt="" />
-            </button>
-            <a
-              href={url}
-              download="recording.mp3"
-              target="_blank"
-              className="btn"
-            >
-              <img src={download} alt="" />
-            </a>
+        {url ? (
+          <div className="duration">
+            <span>{timeFormat(isRecording ? duration : currentTime)}</span>
+            <span>{timeFormat(duration)}</span>
           </div>
-        </div>
-      )}
+        ) : (
+          <div className="recording">
+            {/* <span>{timeFormat(isRecording ? duration : currentTime)}</span> */}
+            <span>{timeFormat(duration)}</span>
+          </div>
+        )}
+        {url && (
+          <div className="operation">
+            <input
+              type="range"
+              min={0}
+              max={duration}
+              value={currentTime}
+              onChange={handleSeek}
+              className="duration-bar"
+            />
+            <audio ref={audioRef} src={url} style={{ display: "none" }} />
+          </div>
+        )}
+      </div>
       <div className="control">
         {!url && (
           <>
@@ -177,6 +159,28 @@ const AudioRecorder = () => {
           </>
         )}
       </div>
+      {url && (
+        <div className="btns">
+          <button className="btn" onClick={handlePlayPause}>
+            {isPlaying ? (
+              <img src={pause} alt="pause" />
+            ) : (
+              <img src={play} alt="play" />
+            )}
+          </button>
+          <button className="btn" onClick={removeAudio}>
+            <img src={remove} alt="" />
+          </button>
+          <a
+            href={url}
+            download="recording.mp3"
+            target="_blank"
+            className="btn"
+          >
+            <img src={download} alt="" />
+          </a>
+        </div>
+      )}
     </div>
   );
 };

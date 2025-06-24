@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 
 const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [audioMode, setAudioMode] = useState(true);
   const navigate = useNavigate();
+
   const setPage = () => {
     setAudioMode(!audioMode);
     if (audioMode) {
@@ -13,16 +13,17 @@ const App = () => {
       navigate("");
     }
   };
+
   return (
     <div className="app">
       <header>
         <h1>Horizon A/V recorder</h1>
       </header>
-      <nav>
+      {/* <nav>
         <button onClick={setPage}>
           Switch to {audioMode ? <>Video</> : <>Audio</>}
         </button>
-      </nav>
+      </nav> */}
       <main>
         <Outlet />
       </main>

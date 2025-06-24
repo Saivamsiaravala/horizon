@@ -123,6 +123,7 @@ const VideoRecorder = () => {
 
   return (
     <div className="video">
+      {/* <div>{url ? <></> : <>{isRecording ? <>preview</> : <>image</>}</>} </div> */}
       <div className="multimedia">
         {url ? (
           <div className="operation">
@@ -130,9 +131,9 @@ const VideoRecorder = () => {
               ref={videoRef}
               src={url}
               controls={false}
-              style={{ width: "10rem", borderRadius: "10px" }}
+              // style={{ width: "10rem", borderRadius: "10px" }}
             />
-            {url ? (
+            {!isRecording ? (
               <div className="duration">
                 <span>{timeFormat(isRecording ? duration : currentTime)}</span>
                 <span>{timeFormat(duration)}</span>
@@ -150,26 +151,6 @@ const VideoRecorder = () => {
               onChange={handleSeek}
               className="duration-bar"
             />
-            <div className="btns">
-              <button className="btn" onClick={handlePlayPause}>
-                {isPlaying ? (
-                  <img src={pause} alt="pause" />
-                ) : (
-                  <img src={play} alt="play" />
-                )}
-              </button>
-              <button className="btn" onClick={removeAudio}>
-                <img src={remove} alt="" />
-              </button>
-              <a
-                href={url}
-                download="recording.mp3"
-                target="_blank"
-                className="btn"
-              >
-                <img src={download} alt="" />
-              </a>
-            </div>
           </div>
         ) : isRecording ? (
           <div className="preview">
@@ -177,16 +158,39 @@ const VideoRecorder = () => {
               ref={previewRef}
               autoPlay
               muted
-              style={{ width: "10rem", borderRadius: "10px" }}
+              // style={{ width: "10rem", borderRadius: "10px" }}
             />
             <div className="recording">
               <span>{timeFormat(duration)}</span>
             </div>
           </div>
         ) : (
-          <img src={multimedia} alt="" style={{ width: "8rem" }} />
+          <img src={multimedia} alt="" />
         )}
       </div>
+
+      {url && (
+        <div className="btns">
+          <button className="btn" onClick={handlePlayPause}>
+            {isPlaying ? (
+              <img src={pause} alt="pause" />
+            ) : (
+              <img src={play} alt="play" />
+            )}
+          </button>
+          <button className="btn" onClick={removeAudio}>
+            <img src={remove} alt="" />
+          </button>
+          <a
+            href={url}
+            download="recording.mp3"
+            target="_blank"
+            className="btn"
+          >
+            <img src={download} alt="" />
+          </a>
+        </div>
+      )}
 
       <div className="control">
         {!url && (
