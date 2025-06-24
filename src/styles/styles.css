@@ -1,0 +1,179 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(241, 229, 229);
+  overflow: hidden;
+}
+
+.app {
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+.app header {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.75rem;
+  border-bottom: 2px solid black;
+}
+.app main .audio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.app main .audio .headphone {
+  margin: 1rem;
+}
+.app main .audio .headphone img {
+  width: 8rem;
+}
+.app main .audio .duration {
+  display: flex;
+  justify-content: space-between;
+  width: 15rem;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  margin: 1rem;
+}
+.app main .audio .duration span {
+  background-color: blue;
+  padding: 0.5rem;
+  border-radius: 5rem;
+}
+.app main .audio .recording {
+  margin: 1rem;
+  padding: 1rem;
+  color: white;
+  font-weight: 700;
+}
+.app main .audio .recording span {
+  background-color: blue;
+  padding: 0.5rem;
+  border-radius: 5rem;
+}
+.app main .audio .control {
+  padding: 1rem;
+}
+.app main .audio .control .control-btn {
+  border: transparent;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border-radius: 100%;
+}
+.app main .audio .control .control-btn img {
+  width: 3rem;
+}
+.app main .audio .control .control-btn img:hover {
+  transform: scale(90%);
+}
+.app main .audio .operation {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app main .audio .operation .duration-bar {
+  width: 10rem;
+}
+.app main .audio .operation .btns {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.app main .audio .operation .btns .btn {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.app main .audio .operation .btns .btn img {
+  width: 2rem;
+}
+.app main .video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.app main .video .control {
+  padding: 1rem;
+}
+.app main .video .control button {
+  border: transparent;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border-radius: 100%;
+}
+.app main .video .control button img {
+  width: 3rem;
+}
+.app main .video .control button img:hover {
+  transform: scale(90%);
+}
+.app main .video .operation {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.app main .video .operation .duration-bar {
+  width: 10rem;
+}
+.app main .video .operation .btns {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.app main .video .operation .btns .btn {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.app main .video .operation .btns .btn img {
+  width: 2rem;
+}
+.app main .video .duration {
+  display: flex;
+  justify-content: space-between;
+  width: 15rem;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  margin: 1rem;
+}
+.app main .video .duration span {
+  background-color: blue;
+  padding: 0.5rem;
+  border-radius: 5rem;
+}
+.app main .video .recording {
+  margin: 1rem;
+  padding: 1rem;
+  color: white;
+  font-weight: 700;
+}
+.app main .video .recording span {
+  background-color: blue;
+  padding: 0.5rem;
+  border-radius: 5rem;
+}
+.app main .video .multimedia {
+  margin: 1rem;
+}
+.app main .video .multimedia .preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app main .video .multimedia img {
+  width: 8rem;
+}/*# sourceMappingURL=styles.css.map */
