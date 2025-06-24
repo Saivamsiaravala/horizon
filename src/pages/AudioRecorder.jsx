@@ -144,22 +144,8 @@ const AudioRecorder = () => {
           </div>
         )}
       </div>
-      <div className="control">
-        {!url && (
-          <>
-            {isRecording ? (
-              <button className="control-btn" onClick={stopRecording}>
-                <img src={record} alt="Stop" />
-              </button>
-            ) : (
-              <button className="control-btn" onClick={startRecording}>
-                <img src={mic} alt="Record" />
-              </button>
-            )}
-          </>
-        )}
-      </div>
-      {url && (
+
+      {url ? (
         <div className="btns">
           <button className="btn" onClick={handlePlayPause}>
             {isPlaying ? (
@@ -179,6 +165,22 @@ const AudioRecorder = () => {
           >
             <img src={download} alt="" />
           </a>
+        </div>
+      ) : (
+        <div className="control">
+          {!url && (
+            <>
+              {isRecording ? (
+                <button className="control-btn" onClick={stopRecording}>
+                  <img src={record} alt="Stop" />
+                </button>
+              ) : (
+                <button className="control-btn" onClick={startRecording}>
+                  <img src={mic} alt="Record" />
+                </button>
+              )}
+            </>
+          )}
         </div>
       )}
     </div>

@@ -5,7 +5,7 @@ const App = () => {
   const [audioMode, setAudioMode] = useState(true);
   const navigate = useNavigate();
 
-  const setPage = () => {
+  const handleToggle = () => {
     setAudioMode(!audioMode);
     if (audioMode) {
       navigate("/video");
@@ -16,6 +16,10 @@ const App = () => {
 
   return (
     <div className="app">
+      <label className="toggle-switch">
+        <input type="checkbox" onChange={handleToggle} />
+        <span className="slider"></span>
+      </label>
       <header>
         <h1>Horizon A/V recorder</h1>
       </header>
