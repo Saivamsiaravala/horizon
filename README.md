@@ -3,6 +3,7 @@
 **Audio and Video Recorder**
 
 **Audio Recorder Component**
+
 State for recording, url,playing, duration, currentTime (for seek)
 Ref for Stream, recording, chunks(stream), audioRef,timerRef
 
