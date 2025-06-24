@@ -23,11 +23,6 @@ const App = () => {
       <header>
         <h1>Horizon A/V</h1>
       </header>
-      {/* <nav>
-        <button onClick={setPage}>
-          Switch to {audioMode ? <>Video</> : <>Audio</>}
-        </button>
-      </nav> */}
       <main>
         <Outlet />
       </main>
