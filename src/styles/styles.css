@@ -88,6 +88,7 @@ body {
 }
 .app main .audio .operation .btns .btn {
   border: none;
+  background-color: transparent;
   cursor: pointer;
   padding: 0;
 }
