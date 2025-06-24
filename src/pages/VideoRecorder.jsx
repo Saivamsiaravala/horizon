@@ -127,12 +127,7 @@ const VideoRecorder = () => {
       <div className="multimedia">
         {url ? (
           <div className="operation">
-            <video
-              ref={videoRef}
-              src={url}
-              controls={false}
-              // style={{ width: "10rem", borderRadius: "10px" }}
-            />
+            <video ref={videoRef} src={url} controls={false} />
             {!isRecording ? (
               <div className="duration">
                 <span>{timeFormat(isRecording ? duration : currentTime)}</span>
@@ -169,7 +164,7 @@ const VideoRecorder = () => {
         )}
       </div>
 
-      {url && (
+      {url ? (
         <div className="btns">
           <button className="btn" onClick={handlePlayPause}>
             {isPlaying ? (
@@ -190,24 +185,24 @@ const VideoRecorder = () => {
             <img src={download} alt="" />
           </a>
         </div>
+      ) : (
+        <div className="control">
+          {!url && (
+            <>
+              {" "}
+              {isRecording ? (
+                <button className="record-btn" onClick={stopRecording}>
+                  <img src={record} alt="Stop" />
+                </button>
+              ) : (
+                <button className="record-btn" onClick={startRecording}>
+                  <img src={camera} alt="Record" />
+                </button>
+              )}
+            </>
+          )}
+        </div>
       )}
-
-      <div className="control">
-        {!url && (
-          <>
-            {" "}
-            {isRecording ? (
-              <button className="record-btn" onClick={stopRecording}>
-                <img src={record} alt="Stop" />
-              </button>
-            ) : (
-              <button className="record-btn" onClick={startRecording}>
-                <img src={camera} alt="Record" />
-              </button>
-            )}
-          </>
-        )}
-      </div>
     </div>
   );
 };
