@@ -31,8 +31,8 @@ body,
   height: 100vh;
   .toggle-switch {
     position: absolute;
-    top: 05%;
-    right: 05%;
+    top: 5%;
+    right: 5%;
     width: 50px;
     height: 24px;
     display: inline-block;
@@ -50,7 +50,7 @@ body,
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: #000;
+      background-color: #ccc;
       transition: 0.4s;
       border-radius: 24px;
 
@@ -89,21 +89,20 @@ body,
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 100%;
+      // width: 100%;
       justify-content: center;
       @include respond-to(md) {
         flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
+        align-content: space-evenly;
+        justify-items: space-around;
       }
       .content {
-        margin: 0;
+        margin-top: 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-width: 60vw;
         @include respond-to(md) {
-          min-width: 80vw;
+          min-width: 50vw;
         }
 
         .headphone {
@@ -166,6 +165,8 @@ body,
         }
       }
       .btns {
+        border: 2px solid black;
+
         display: flex;
         width: 100%;
         justify-content: center;
@@ -187,7 +188,7 @@ body,
           img {
             width: 2rem;
             @include respond-to(md) {
-              width: 3rem;
+              // width: 3rem;
             }
           }
         }
@@ -202,16 +203,17 @@ body,
       @include respond-to(md) {
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
+        // border: 2px solid blue;
       }
       .multimedia {
         margin-top: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        min-width: 60vw;
+        // min-width: 60vw;
         @include respond-to(md) {
-          min-width: 80vw;
+          min-width: 50vw;
         }
 
         .operation {
@@ -316,7 +318,7 @@ body,
         }
       }
       .control {
-        padding: 0.5rem;
+        padding: 1rem;
         display: flex;
         justify-content: center;
 

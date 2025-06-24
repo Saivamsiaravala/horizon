@@ -21,7 +21,7 @@ const App = () => {
         <span className="slider"></span>
       </label>
       <header>
-        <h1>Horizon A/V recorder</h1>
+        <h1>Horizon A/V</h1>
       </header>
       {/* <nav>
         <button onClick={setPage}>
