@@ -172,7 +172,7 @@ const VideoRecorder = () => {
               <img src={play} alt="play" />
             )}
           </button>
-          <button className="btn" onClick={removeAudio}>
+          <button className="btn" onClick={removeVideo}>
             <img src={remove} alt="" />
           </button>
           <a
